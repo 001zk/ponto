@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Ponto</title>
+    <link rel="stylesheet" href="style.css"> 
+</head>
+<body>
+    <div class="form-container">
+        <h2>Registro de Ponto</h2>
+        <form method="post">
+            <div class="input-group">
+                <label for="dia">Dia:</label>
+                <select name="dia" id="dia" required>
+                    <option value="">Selecione o Dia</option>
+                </select>
+            </div>
+            
+            <div class="input-group">
+                <label for="entrada">Entrada:</label>
+                <input type="time" name="entrada" required>
+            </div>
+
+            <div class="input-group">
+                <label for="inicio_intervalo">Início do Intervalo:</label>
+                <input type="time" name="inicio_intervalo" required>
+            </div>
+
+            <div class="input-group">
+                <label for="fim_intervalo">Fim do Intervalo:</label>
+                <input type="time" name="fim_intervalo" required>
+            </div>
+
+            <div class="input-group">
+                <label for="saida">Saída:</label>
+                <input type="time" name="saida" required>
+            </div>
+
+            <div class="input-group">
+                <label for="hora_extra">Hora Extra Autorizada:</label>
+                <input type="text" name="hora_extra">
+            </div>
+
+            <div class="input-group">
+                <label for="assinatura_lider">Assinatura do Líder:</label>
+                <input type="text" name="assinatura_lider">
+            </div>
+
+            <div class="input-group">
+                <label for="assinatura_colaborador">Assinatura do Colaborador(a):</label>
+                <input type="text" name="assinatura_colaborador">
+            </div>
+
+            <button type="submit">Salvar</button>
+        </form>
+    </div>
+
+    <script>
+        const selectDia = document.getElementById("dia");
+
+        for (let i = 1; i <= 30; i++) {
+            const option = document.createElement("option");
+            option.value = i;
+            option.textContent = i;
+            selectDia.appendChild(option);
+        }
+    </script>
+</body>
+</html>
